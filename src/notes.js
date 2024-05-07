@@ -1,6 +1,40 @@
+const { nanoid } = require("nanoid");
+
 const notes =[];
-const newNote = {
-        "title", "tags", "body", 1, Date.now().toString(), Date.now().toString(),
+newNote = {
+        title:"title", 
+        tag: "tags", 
+        body: "body", 
+        id: nanoid(16),
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+      };
+notes.push(newNote);
+newNote = {
+        title:"title", 
+        tag: "tags", 
+        body: "body", 
+        id: nanoid(16),
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+      };
+notes.push(newNote);
+newNote = {
+        title:"title", 
+        tag: "tags", 
+        body: "body", 
+        id: nanoid(16),
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
+      };
+notes.push(newNote);
+newNote = {
+        title:"title", 
+        tag: "tags", 
+        body: "body", 
+        id: nanoid(16),
+        createdAt: new Date().toISOString(),
+        updatedAt: new Date().toISOString()
       };
 notes.push(newNote);
 
