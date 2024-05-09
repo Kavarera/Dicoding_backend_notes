@@ -1,6 +1,10 @@
 const { nanoid } = require("nanoid");
 const notes = require("./notes");
 
+const nothingToHandle=(request,h)=>{
+    return h.response().code(200);
+}
+
 const addNoteHandler=(request,h)=>{
     const{title,tags,body} = request.payload;
     const id = nanoid(16);
@@ -111,4 +115,4 @@ const deleteNoteByIdHandler =(request,h)=>{
     return response;
 }
 
-module.exports={addNoteHandler,getAllNotesHandler, getNotesByIdHandler, editNoteByIdHandler,deleteNoteByIdHandler };
+module.exports={addNoteHandler,getAllNotesHandler, getNotesByIdHandler, editNoteByIdHandler,deleteNoteByIdHandler,nothingToHandle };
